@@ -9,8 +9,8 @@
 
 <style>
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: white;
 }
@@ -30,25 +30,39 @@ nav a {
 
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .hero span {
     color: #38bdf8;
 }
 
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
 section {
-    padding: 40px;
+    padding: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
     background: #1e293b;
     padding: 20px;
-    margin: 10px 0;
     border-radius: 10px;
 }
 
@@ -75,36 +89,40 @@ footer {
 <div class="hero">
     <h1>Hello, I'm <span>Shukuru Marco</span></h1>
     <p>Data Scientist | Machine Learning | AI</p>
+    <button class="btn">Hire Me</button>
 </div>
 
 <section id="about">
     <h2>About Me</h2>
-    <div class="card">
-        <p>I am a passionate Data Scientist skilled in Python, Machine Learning and Data Analysis. I love solving real-world problems using data.</p>
-    </div>
+    <p>I am a passionate Data Scientist skilled in Python, Machine Learning, SQL and Data Visualization. I solve real-world problems using data.</p>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
+    <div class="grid">
 
-    <div class="card">
-        <h3>Data Analysis Project</h3>
-        <p>Analyzed datasets to extract insights using Python.</p>
+        <div class="card">
+            <h3>Sales Prediction</h3>
+            <p>Built ML model to predict future sales using Python.</p>
+        </div>
+
+        <div class="card">
+            <h3>Customer Analysis</h3>
+            <p>Analyzed customer behavior using data visualization.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Chatbot</h3>
+            <p>Developed chatbot using AI and NLP.</p>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>Machine Learning Model</h3>
-        <p>Built predictive models using Scikit-learn.</p>
-    </div>
-
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <div class="card">
-        <p>Email: shukurumarco2@gmail.com</p>
-        <p>Phone: 0777249508</p>
-    </div>
+    <p>Email: shukurumarco2@gmail.com</p>
+    <p>Phone: 0777249508</p>
 </section>
 
 <footer>
