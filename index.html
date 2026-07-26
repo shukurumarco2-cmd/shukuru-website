@@ -236,4 +236,41 @@ function reply(){
 
   document.getElementById("userInput").value = "";
 }
-</script>
+</script><button onclick="pay('Beginner')">Pay with Tigo Pesa</button><script>
+function pay(course){
+  alert(
+    "To enroll in " + course + " course:\n\n" +
+    "1. Dial *150*01#\n" +
+    "2. Choose Pay by number\n" +
+    "3. Enter: 0777249508\n" +
+    "4. Amount depends on course\n\n" +
+    "After payment, send proof on WhatsApp."
+  );
+
+  window.open("https://wa.me/255777249508?text=I have paid for "+course+" course");
+}
+</script>const express = require("express");
+const app = express();
+
+app.use(express.json());
+
+app.post("/chat", async (req, res) => {
+  const userMessage = req.body.message;
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer YOUR_API_KEY",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: userMessage }]
+    })
+  });
+
+  const data = await response.json();
+  res.json(data);
+});
+
+app.listen(3000);
