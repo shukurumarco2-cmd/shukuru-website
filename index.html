@@ -1,100 +1,107 @@
-</div></div>
-</section><section class="hero">
-  <h1>Shukuru Marco Paschali</h1>
-  <p>Data Scientist</p>
-  <a href="#contact" class="btn">Contact me</a>
-</section>
-
-<style>
-.hero {
-  height: 100vh;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.hero .btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: white;
-  color: #2a5298;
-  border-radius: 5px;
-  text-decoration: none;
-}
-</style><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shukuru Marco | Data Scientist</title>
+<title>Shukuru Marco Paschali | Data Scientist</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
-    color: white;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0A192F;
+  color: white;
 }
 
+/* NAV */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #020617;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #020c1b;
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  margin: 10px;
+  text-decoration: none;
 }
 
+/* HERO */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 45px;
+  font-size: 40px;
 }
 
 .hero span {
-    color: #38bdf8;
+  color: #00ADB5;
 }
 
-.btn {
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+/* SKILLS */
+#skills {
+  padding: 40px;
+  text-align: center;
 }
 
-section {
-    padding: 50px;
+.skill-box {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #112240;
+  border-radius: 20px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* COURSES */
+#courses {
+  padding: 40px;
+  text-align: center;
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
+  display: inline-block;
+  background: #112240;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 250px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
+.card button {
+  background: #00ADB5;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* CHATBOT */
+#chatbot {
+  padding: 40px;
+  text-align: center;
+}
+
+/* CONTACT */
+#contact {
+  padding: 40px;
+  text-align: center;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -102,162 +109,131 @@ footer {
 <body>
 
 <nav>
-    <h2>Shukuru</h2>
-    <div>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <h2>Shukuru Marco</h2>
+  <div>
+    <a href="#skills">Skills</a>
+    <a href="#courses">Courses</a>
+    <a href="#chatbot">AI Chat</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<div class="hero">
-    <h1>Hello, I'm <span>Shukuru Marco Paschali</span></h1>
-    <p>Data Scientist | Machine Learning | AI</p>
-    <button class="btn">Hire Me</button>
-</div>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate Data Scientist skilled in Python, Machine Learning, SQL and Data Visualization. I solve real-world problems using data.</p>
+<section class="hero">
+  <h1>I am <span>Shukuru Marco Paschali</span></h1>
+  <p>Professional Data Scientist & Instructor</p>
 </section>
 
-    </div>
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skill-box">Python</div>
+  <div class="skill-box">Data Analysis</div>
+  <div class="skill-box">Machine Learning</div>
+  <div class="skill-box">Deep Learning</div>
+  <div class="skill-box">SQL</div>
+  <div class="skill-box">Data Visualization</div>
+</section>
+
+<section id="courses">
+  <h2>Data Science Courses</h2>
+
+  <div class="card">
+    <h3>Beginner</h3>
+    <p>Python, Basics, Statistics</p>
+    <h4>$50</h4>
+    <button onclick="enroll('Beginner')">Enroll</button>
+  </div>
+
+  <div class="card">
+    <h3>Intermediate</h3>
+    <p>Pandas, Visualization, ML</p>
+    <h4>$100</h4>
+    <button onclick="enroll('Intermediate')">Enroll</button>
+  </div>
+
+  <div class="card">
+    <h3>Advanced</h3>
+    <p>Deep Learning, AI Projects</p>
+    <h4>$200</h4>
+    <button onclick="enroll('Advanced')">Enroll</button>
+  </div>
+
+</section>
+
+<section id="chatbot">
+  <h2>AI Assistant</h2>
+  <input type="text" id="userInput" placeholder="Ask about data science...">
+  <button onclick="reply()">Send</button>
+  <p id="botReply"></p>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: shukurumarco2@gmail.com</p>
-    <p>Phone: 0777249508</p>
+  <h2>Contact</h2>
+  <p>Phone: 0777249508</p>
+  <p>Email: shukurumarco2@gmail.com</p>
 </section>
 
-<footer>
-    <p>© 2026 Shukuru Marco Paschali</p>
-</footer>
+<a href="https://wa.me/255777249508" class="whatsapp">💬</a>
+
+<script>
+function enroll(level){
+  window.open("https://wa.me/255777249508?text=I want to enroll in "+level+" course");
+}
+
+function reply(){
+  let input = document.getElementById("userInput").value.toLowerCase();
+  let response = "";
+
+  if(input.includes("python")){
+    response = "Start with Python basics, then move to Pandas.";
+  }
+  else if(input.includes("data science")){
+    response = "Data Science involves data analysis, machine learning, and visualization.";
+  }
+  else if(input.includes("course")){
+    response = "We offer Beginner ($50), Intermediate ($100), and Advanced ($200).";
+  }
+  else{
+    response = "I will guide you step by step in learning Data Science!";
+  }
+
+  document.getElementById("botReply").innerText = response;
+}
+</script>
 
 </body>
-</html>
-<a href="https://wa.me/255777249508" target="_blank" class="wa-icon">
-  💬
-</a>
-
-<style>
-.wa-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  font-size: 24px;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-}<section id="projects" class="section">
-  <h2>My Projects</h2>
-  <p>I am currently working on building my first projects. Stay tuned 🚀</p>
-
-  <div class="projects-container">
-    <!-- Projects will be added here soon -->
-  </div><section id="skills" class="section">
-  <h2 class="skills-title">My Skills</h2>
+</html><section id="chatbot">
+  <h2>AI Assistant</h2>
+  <input type="text" id="userInput" placeholder="Ask anything...">
+  <button onclick="reply()">Send</button>
+  <div id="chatBox"></div>
 </section>
-</section><li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>git add .
-git commit -m "Added skills and empty projects section"
-git push
-<div class="skills-container">
 
-  <!-- Web Development Skills -->
-  <div class="skill-box">
-    <h3>HTML</h3>
-    <p>Building structured web pages</p>
-  </div>
+<script>
+function reply(){
+  let input = document.getElementById("userInput").value;
+  let chatBox = document.getElementById("chatBox");
 
-  <div class="skill-box">
-    <h3>CSS</h3>
-    <p>Designing responsive layouts</p>
-  </div>
+  let userMsg = "<p><b>You:</b> " + input + "</p>";
+  chatBox.innerHTML += userMsg;
 
-  <div class="skill-box">
-    <h3>JavaScript</h3>
-    <p>Adding interactivity to websites</p>
-  </div>
+  let response = "";
 
-  <div class="skill-box">
-    <h3>Git & GitHub</h3>
-    <p>Version control and project hosting</p>
-  </div>
+  if(input.toLowerCase().includes("price")){
+    response = "Beginner: $50, Intermediate: $100, Advanced: $200.";
+  }
+  else if(input.toLowerCase().includes("python")){
+    response = "Start with Python basics, then Pandas and visualization.";
+  }
+  else if(input.toLowerCase().includes("enroll")){
+    response = "Click enroll button or pay via Tigo Pesa: 0777249508";
+  }
+  else{
+    response = "I am your AI tutor. I will guide you step by step in Data Science.";
+  }
 
-  <div class="skill-box">
-    <h3>Responsive Design</h3>
-    <p>Mobile-friendly websites</p>
-  </div>
+  let botMsg = "<p><b>AI:</b> " + response + "</p>";
+  chatBox.innerHTML += botMsg;
 
-  <!-- Data Science Skills -->
-  <div class="skill-box">
-    <h3>Python</h3>
-    <p>Data analysis and scripting</p>
-  </div>
-
-  <div class="skill-box">
-    <h3>Pandas</h3>
-    <p>Data manipulation and analysis</p>
-  </div>
-
-  <div class="skill-box">
-    <h3>NumPy</h3>
-    <p>Numerical computing</p>
-  </div>
-
-  <div class="skill-box">
-    <h3>Matplotlib</h3>
-    <p>Data visualization</p>
-  </div>
-
-  <div class="skill-box">
-    <h3>Machine Learning</h3>
-    <p>Building predictive models</p>
-  </div>
-
-  <div class="skill-box">
-    <h3>Data Cleaning</h3>
-    <p>Preparing raw data for analysis</p>
-  </div>
-
-</div>
-<!-- CONTACT SECTION -->
-<section id="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
-
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-
-      <input type="email" name="email" placeholder="Your Email" required>
-
-      <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Message</button>
-
-    </form>
-  </div>
-</section><section id="contact">
-  <h2>Contact Me</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Write your message..." required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-
-  <p id="response"></p>
-</section><script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  document.getElementById("response").innerText = 
-    "Thank you! Your message has been received.";
-
-  this.reset();
-});
+  document.getElementById("userInput").value = "";
+}
 </script>
