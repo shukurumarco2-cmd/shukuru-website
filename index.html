@@ -251,4 +251,13 @@ git push
   </form>
 
   <p id="response"></p>
-</section>
+</section><script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  document.getElementById("response").innerText = 
+    "Thank you! Your message has been received.";
+
+  this.reset();
+});
+</script>
