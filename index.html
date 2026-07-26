@@ -217,17 +217,81 @@ function reply(){
   else if(input.toLowerCase().includes("python")){
     response = "Start with Python basics, then Pandas and visualization.";
   }
-  else if(input.toLowerCase().includes("enroll")){
-    response = "Click enroll button or pay via Tigo Pesa: 0777249508";
-  }
-  else{
-    response = "Iam shukuru Marco Pacshali. I will guide you step by step in Data Science,I encourage you to start with beginner course.";
-  }
+  
 
   let botMsg = "<p><b>AI:</b> " + response + "</p>";
   chatBox.innerHTML += botMsg;
 
+  do<section id="chatbot">
+  <h2>Chat with Instructor</h2>
+
+  <div id="chatBox" style="max-width:500px;margin:auto;text-align:left;"></div>
+
+  <input type="text" id="userInput" placeholder="Ask about data science..." style="width:70%;padding:10px;">
+  <button onclick="reply()" style="padding:10px;">Send</button>
+</section>
+
+<style>
+#chatBox p {
+  background: #112240;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+</style>
+
+<script>
+function reply(){
+  let input = document.getElementById("userInput").value;
+  let chatBox = document.getElementById("chatBox");
+
+  if(input.trim() === "") return;
+
+  // USER MESSAGE
+  let userMsg = "<p><b>You:</b> " + input + "</p>";
+  chatBox.innerHTML += userMsg;
+
+  // TYPING EFFECT
+  let typing = "<p id='typing'><b>Shukuru:</b> typing...</p>";
+  chatBox.innerHTML += typing;
+
+  // RESPONSE LOGIC
+  let response = "";
+
+  let text = input.toLowerCase();
+
+  if(text.includes("price") || text.includes("bei")){
+    response = "Our courses are: Beginner ($50), Intermediate ($100), and Advanced ($200). Which one would you like?";
+  }
+  else if(text.includes("python")){
+    response = "I recommend starting with Python basics, then move to data analysis using Pandas.";
+  }
+  else if(text.includes("start")){
+    response = "If you're new, begin with the Beginner course. I will guide you step by step.";
+  }
+  else if(text.includes("payment") || text.includes("tigo")){
+    response = "You can pay via Tigo Pesa using 0777249508. After payment, send confirmation on WhatsApp.";
+  }
+  else if(text.includes("course")){
+    response = "We have three levels: Beginner, Intermediate, and Advanced. Each is designed step by step.";
+  }
+  else{
+    response = "Thanks for your message. I will personally guide you through your data science journey.";
+  }
+
+  // DELAY (INAONEKANA MTU ANATYPE)
+  setTimeout(() => {
+    document.getElementById("typing").remove();
+
+    let botMsg = "<p><b>Shukuru:</b> " + response + "</p>";
+    chatBox.innerHTML += botMsg;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }, 1500);
+
   document.getElementById("userInput").value = "";
+}
+</script>cument.getElementById("userInput").value = "";
 }
 </script><button onclick="pay('Beginner')">Pay with Tigo Pesa</button><script>
 function pay(course){
