@@ -1,0 +1,252 @@
+SLIDE 1 — TITLE
+
+RL_REIT: REIT MARKET ANALYSIS AND PREDICTION
+
+A Data Science Project
+
+Analysis of IYR, VNQ and XLRE
+Data Analysis • Feature Engineering • Machine Learning
+
+Presented by: Shukuru Marco Paschali
+
+
+SLIDE 2 — PROJECT OVERVIEW
+
+Project Overview
+
+- This project focuses on analyzing Real Estate Investment Trust (REIT) market data.
+- The main assets analyzed are IYR, VNQ and XLRE.
+- Each dataset was analyzed separately to preserve its individual market behavior.
+- The project follows a complete data science workflow.
+- The final objective is to prepare the data for predictive modeling.
+
+
+SLIDE 3 — PROJECT OBJECTIVES
+
+Project Objectives
+
+- Analyze historical REIT market data.
+- Check and prepare data quality.
+- Perform Exploratory Data Analysis (EDA).
+- Analyze price movements and returns.
+- Measure volatility and market risk.
+- Create useful machine-learning features.
+- Prepare training and testing datasets.
+- Predict future REIT returns.
+
+
+SLIDE 4 — DATASETS
+
+Datasets Used
+
+The project uses three REIT datasets:
+
+- IYR — iShares U.S. Real Estate ETF
+- VNQ — Vanguard Real Estate ETF
+- XLRE — Real Estate Select Sector SPDR Fund
+
+Data Processing Stages:
+
+- Raw data
+- Cleaned data
+- Feature-engineered data
+
+Each REIT was analyzed separately before comparison.
+
+
+SLIDE 5 — DATA QUALITY AND CLEANING
+
+Data Quality Assessment
+
+The following checks were performed:
+
+- Missing values
+- Duplicate records
+- Data types
+- Dataset shape
+- Column names
+- Descriptive statistics
+
+Results:
+
+- No missing values were found in the analyzed dataset.
+- Data types were checked and prepared for analysis.
+- Date information was converted into datetime format.
+- The dataset was ready for further analysis.
+
+
+SLIDE 6 — EXPLORATORY DATA ANALYSIS
+
+Exploratory Data Analysis (EDA)
+
+The following techniques were used:
+
+- Dataset inspection
+- Descriptive statistics
+- Histograms
+- Correlation matrix
+- Closing-price visualization
+- Time-series analysis
+
+Purpose:
+
+To understand the distribution, relationships and behavior of the REIT market data.
+
+
+SLIDE 7 — PRICE AND RETURN ANALYSIS
+
+Price and Return Analysis
+
+Closing prices were analyzed over time to identify:
+
+- Market trends
+- Price fluctuations
+- Upward and downward movements
+- Long-term price behavior
+
+Daily returns were calculated using:
+
+Daily Return = (Current Price / Previous Price) - 1
+
+Daily returns help measure short-term market performance.
+
+
+SLIDE 8 — RISK AND VOLATILITY ANALYSIS
+
+Risk and Volatility Analysis
+
+A rolling volatility measure was calculated using daily returns.
+
+30-Day Rolling Volatility
+
+Volatility helps identify:
+
+- High-risk periods
+- Low-risk periods
+- Large market fluctuations
+- Changes in market uncertainty
+
+This provides a better understanding of REIT investment risk.
+
+
+SLIDE 9 — FEATURE ENGINEERING
+
+Feature Engineering
+
+Several predictive features were created:
+
+- MA_10 — 10-day moving average
+- MA_30 — 30-day moving average
+- Volatility_10 — 10-day rolling volatility
+- Momentum_10 — 10-day price momentum
+- Return_5 — 5-day return
+- Return_20 — 20-day return
+
+These features transform historical market data into useful machine-learning inputs.
+
+
+SLIDE 10 — TARGET VARIABLE
+
+Prediction Target
+
+The target variable represents the next-day return.
+
+df["Target"] = df["Daily_Return"].shift(-1)
+
+Prediction problem:
+
+Historical Market Features → Future REIT Return
+
+This creates a supervised machine-learning problem.
+
+
+SLIDE 11 — TRAIN AND TEST SPLIT
+
+Training and Testing
+
+The dataset was divided chronologically:
+
+- 80% — Training Data
+- 20% — Testing Data
+
+A chronological split was used because this is financial time-series data.
+
+Why?
+
+It prevents future observations from being used to train the model before they occur.
+
+
+SLIDE 12 — FEATURE SCALING
+
+Feature Scaling
+
+StandardScaler was used to standardize the numerical features.
+
+The scaler was:
+
+- Fitted only on training data.
+- Used to transform training data.
+- Used to transform testing data.
+
+This helps prevent data leakage and ensures consistent feature scaling.
+
+
+SLIDE 13 — MACHINE LEARNING MODEL
+
+Machine Learning Model
+
+Baseline Model:
+
+Linear Regression
+
+Input Features:
+
+- Closing price
+- Moving averages
+- Returns
+- Volatility
+- Momentum
+
+Output:
+
+Predicted next-day return
+
+The baseline model provides a starting point for model comparison.
+
+
+SLIDE 14 — EXPECTED RESULTS AND FUTURE WORK
+
+Expected Results and Future Work
+
+The project aims to:
+
+- Identify important REIT market patterns.
+- Measure performance and volatility.
+- Develop useful predictive features.
+- Predict future returns.
+- Evaluate model performance.
+
+Future Work:
+
+- Compare IYR, VNQ and XLRE.
+- Test advanced machine-learning models.
+- Add more financial indicators.
+- Explore Reinforcement Learning for REIT decision-making.
+
+
+SLIDE 15 — CONCLUSION
+
+Conclusion
+
+- The project follows a complete data science workflow.
+- REIT data was checked and prepared for analysis.
+- Exploratory Data Analysis was used to understand market behavior.
+- Feature engineering created predictive variables.
+- Chronological train/test splitting was used.
+- The prepared data is ready for machine-learning modeling.
+
+THANK YOU
+
+Shukuru Marco Paschali
+
+Questions & Discussion
